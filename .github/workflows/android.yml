@@ -25,8 +25,8 @@ jobs:
     - name: Build with Gradle
       env: 
         STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
-        KEY_ALIAS: ${{ secrets.ALIAS }}
-        KEY_PASSWORD: ${{ secrets.ALIAS_PASSWORD }}
+        ALIAS: ${{ secrets.ALIAS }}
+        ALIAS_PASSWORD: ${{ secrets.ALIAS_PASSWORD }}
       run: ./gradlew assembleRelease
 
     - name: Create Release
