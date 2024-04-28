@@ -13,7 +13,7 @@ android {
     
     signingConfigs {
         release {
-            storeFile file("/justtrustme.jks")
+            storeFile file("../justtrustme.jks")
             storePassword System.getenv("STORE_PASSWORD")
             keyAlias System.getenv("ALIAS")
             keyPassword System.getenv("ALIAS_PASSWORD")
