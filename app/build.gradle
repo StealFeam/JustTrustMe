@@ -15,7 +15,7 @@ android {
         release {
             storeFile file("../justtrustme.jks")
             storePassword System.getenv("STORE_PASSWORD")
-            keyAlias System.getenv("ALIAS")
+            keyAlias = System.getenv("ALIAS")
             keyPassword System.getenv("ALIAS_PASSWORD")
         }
     }
