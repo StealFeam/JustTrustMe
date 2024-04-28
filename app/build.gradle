@@ -10,8 +10,20 @@ android {
         versionName '.3'
     }
 
+    
+    signingConfigs {
+        release {
+            storeFile file("/justtrustme.jks")
+            storePassword STORE_PASSWORD
+            keyAlias ALIAS
+            keyPassword ALIAS_PASSWORD
+        }
+    }
+
     buildTypes {
         release {
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             minifyEnabled false
         }
     }
